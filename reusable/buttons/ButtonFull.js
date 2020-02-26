@@ -8,5 +8,5 @@ const styles = {
 };
 
 export const ButtonFull = ({ title = "Button" }) => {
-  return <button style={styles.ButtonFull}>{title}</button>;
+  return <button style={styles.buttonFull}>{title}</button>;
 };
