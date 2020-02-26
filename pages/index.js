@@ -1,3 +1,3 @@
-const Home = () => <h1>JobHub Romania</h1>
+const Home = () => <></>;
 
-export default Home
+export default Home;
