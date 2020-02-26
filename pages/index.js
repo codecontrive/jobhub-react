@@ -1,11 +1,5 @@
-import { ButtonOutline } from "../reusable/buttons/ButtonOutline";
-import { ButtonFull } from "../reusable/buttons/ButtonFull";
+import { Layout } from "../reusable/layout/Layout";
 
-const Home = () => (
-  <>
-    <ButtonOutline title="Sign Up" />
-    <ButtonFull title="Danger " />
-  </>
-);
+const Main = () => <Layout></Layout>;
 
-export default Home;
+export default Main;
