@@ -1,6 +1,8 @@
+import { ButtonOutline } from "../reusable/buttons/ButtonOutline";
+
 const Home = () => (
   <>
-    <h1>JobHub Romania</h1>
+    <ButtonOutline title="Sign Up" />
   </>
 );
 
