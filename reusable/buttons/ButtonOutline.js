@@ -19,6 +19,14 @@ const styles = {
   }
 };
 
-export const ButtonOutline = ({ title = "Button" }) => {
+export const ButtonOutline = ({ title = "Danger" }) => {
   return <button style={styles.buttonOutline}>{title}</button>;
 };
+
+export const ButtonOutline = ({title = "Info"}) => {
+  return <button style={styles.buttonOutlineBlue}>{title}</button>;
+}
+
+export const ButtonOutline=({title='Default'}) => {
+  return <button style={styles.buttonOutlineWhite}>{title}</button>;
+}
