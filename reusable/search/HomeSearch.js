@@ -22,8 +22,7 @@ export const HomeSearch = () => {
       <DropdownButton
         as={InputGroup.Append}
         title="Timisoara"
-        id="input-group-dropdown-2"
-      >
+        id="input-group-dropdown-2">
         <Dropdown.Item href="#">Action</Dropdown.Item>
         <Dropdown.Item href="#">Another action</Dropdown.Item>
         <Dropdown.Item href="#">Something else here</Dropdown.Item>

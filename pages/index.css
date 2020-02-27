@@ -1,3 +1,28 @@
 .homeContainer {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.homeLogoWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+
+.homeSearchSwitcherWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+
+.homeSearchSwitcherRow {
+  padding: 20px;
+}
+
+.homeBoxFullFlexWrapper {
+  flex: 1;
 }
