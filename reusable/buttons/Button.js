@@ -8,6 +8,18 @@ import {
   BUTTON_SCHEMA_INFO
 } from "../../constants/buttons/ButtonColorSchemas";
 
+export const Button = ({
+  title = "Button",
+  type = BUTTON_TYPE_FULL,
+  schema = BUTTON_SCHEMA_DEFAULT
+}) => {
+  return (
+    <button style={{ ...getTypeStyle(type), ...getSchemaStyle(schema) }}>
+      {title}
+    </button>
+  );
+};
+
 const getTypeStyle = buttonStyle => {
   switch (buttonStyle) {
     case BUTTON_TYPE_FULL:
@@ -37,16 +49,4 @@ const getSchemaStyle = buttonSchema => {
     case BUTTON_SCHEMA_DEFAULT:
       return { border: "1px solid black", color: "black" };
   }
-};
-
-export const Button = ({
-  title = "Button",
-  type = BUTTON_TYPE_FULL,
-  schema = BUTTON_SCHEMA_DEFAULT
-}) => {
-  return (
-    <button style={{ ...getTypeStyle(type), ...getSchemaStyle(schema) }}>
-      {title}
-    </button>
-  );
 };
