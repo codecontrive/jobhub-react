@@ -1,0 +1,2 @@
+export const BUTTON_TYPE_OUTLINE = "BUTTON_OUTLINE";
+export const BUTTON_TYPE_FULL = "BUTTON_FULL";
