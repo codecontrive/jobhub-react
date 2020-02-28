@@ -2,6 +2,8 @@ import { Container, Tab, Row, Col, ListGroup } from "react-bootstrap";
 import { Layout } from "../reusable/layout/Layout";
 import { HomeSearch } from "../reusable/search/HomeSearch";
 
+import Image from 'react-bootstrap/Image';
+import logo from '../assets/logo_transparent.png';
 import css from "./index.css";
 
 const Home = () => (
@@ -9,8 +11,8 @@ const Home = () => (
     <Container className={css.homeContainer}>
       <Row className={css.homeBoxFullFlexWrapper}>
         <Col lg={12} className={css.homeLogoWrapper}>
-          <h1>JobHub</h1>
-          <p>Minimalist Jobs Platform. We love simplicity.</p>
+        <Image className={css.logo} src={logo} fluid alt="JobHub"/>
+          {/* <p>Minimalist Jobs Platform. We love simplicity.</p> */}
         </Col>
         <Col lg={12} className={css.homeSearchSwitcherWrapper}>
           <Tab.Container id="list-group-tabs-example" defaultActiveKey="#link1">
