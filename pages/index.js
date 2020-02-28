@@ -3,7 +3,7 @@ import { Layout } from "../reusable/layout/Layout";
 import { HomeSearch } from "../reusable/search/HomeSearch";
 
 import Image from 'react-bootstrap/Image';
-import logo from '../assets/logo_transparent.png';
+import logo from '../assets/images/logo_transparent.png';
 import css from "./index.css";
 
 const Home = () => (
