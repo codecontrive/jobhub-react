@@ -9,8 +9,7 @@ import css from "./index.css";
 import Image from "react-bootstrap/Image";
 import logo from "../assets/logo_transparent.png";
 
-const Home = props => {
-  console.log(props.jobReducer);
+const Home = () => {
   return (
     <Layout>
       <Container className={css.homeContainer}>

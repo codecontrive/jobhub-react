@@ -1,4 +1,5 @@
 import { JOB_ADD } from "../../constants/actionTypes";
+import { Job } from "../../models/Job";
 
 export const jobAdd = job => {
   return {

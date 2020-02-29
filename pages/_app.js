@@ -3,7 +3,7 @@ import withRedux from "next-redux-wrapper";
 import { Provider } from "react-redux";
 import store from "../store/store";
 
-const MyApp = ({ Component, pageProps, store }) => {
+const App = ({ Component, pageProps, store }) => {
   return (
     <Provider store={store}>
       <Component {...pageProps} />
@@ -11,11 +11,11 @@ const MyApp = ({ Component, pageProps, store }) => {
   );
 };
 
-MyApp.getInitialProps = async ({ Component, ctx }) => {
+App.getInitialProps = async ({ Component, ctx }) => {
   const pageProps = Component.getInitialProps
     ? await Component.getInitialProps(ctx)
     : {};
   return pageProps;
 };
 
-export default withRedux(store)(MyApp);
+export default withRedux(store)(App);
