@@ -19,7 +19,7 @@ import { homeSearchInputPlaceholder } from "../../constants/placeholders";
 
 const HomeSearch = ({ searchMode = SEARCH_MODE_WORK }) => {
   const [searchKeyword, setSearchKeyword] = useState("");
-  const [suggestions] = useSearchSuggestions(searchKeyword);
+  const [suggestions] = useSearchSuggestions(searchKeyword, searchMode);
 
   const displaySuggestions = () => (suggestions.length > 0 ? "block" : "none");
 
