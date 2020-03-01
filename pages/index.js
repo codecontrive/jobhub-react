@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 
-import { Container, Tab, Row, Col, ListGroup } from "react-bootstrap";
+import { Container, Tab, Row, Col, ListGroup, Image } from "react-bootstrap";
 import { Layout } from "../reusable/layout/Layout";
 import HomeSearch from "../reusable/search/HomeSearch";
 
 import css from "./index.css";
-import Image from "react-bootstrap/Image";
-import logo from "../assets/logo_transparent.png";
+import logo from "../assets/Images/logo_transparent.png";
+
 import {
   SEARCH_MODE_WORK,
   SEARCH_MODE_HIRE
