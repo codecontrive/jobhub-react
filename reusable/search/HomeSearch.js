@@ -13,13 +13,13 @@ import {
 import css from "./HomeSearch.css";
 
 export const HomeSearch = () => {
-  const [results, setResults] = useState([]);
+  const [suggestions, setSuggestions] = useState([]);
 
-  const displaySuggestions = () => (results.length > 0 ? "block" : "none");
+  const displaySuggestions = () => (suggestions.length > 0 ? "block" : "none");
 
   // This function is going to be removed.
   const temporarySetResult = text =>
-    setResults(text.length === 0 ? [] : text.split(" "));
+    setSuggestions(text.length === 0 ? [] : text.split(" "));
 
   return (
     <>
