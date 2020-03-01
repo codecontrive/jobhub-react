@@ -14,7 +14,7 @@ import {
 } from "../constants/search/searchModes";
 
 const Home = () => {
-  const [searchMode, setSearchMode] = useState(SEARCH_MODE_WORK);
+  const [searchMode, setSearchMode] = useState(SEARCH_MODE_HIRE);
 
   return (
     <Layout>

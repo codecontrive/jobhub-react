@@ -11,17 +11,39 @@ import {
   ListGroup
 } from "react-bootstrap";
 
+import WorkerSuggestionCard from "./suggestions/work/WorkerSuggestionCard";
+
+import { homeSearchInputPlaceholder } from "../../constants/placeholders";
 import { SEARCH_MODE_WORK } from "../../constants/search/searchModes";
+import {
+  SUGGESTION_TYPE_WORKER,
+  SUGGESTION_TYPE_HIRER
+} from "../../constants/search/suggestionTypes";
+import { useSearchSuggestions } from "../../hooks/useSearchSuggestions";
 
 import css from "./HomeSearch.css";
-import { useSearchSuggestions } from "../../hooks/useSearchSuggestions";
-import { homeSearchInputPlaceholder } from "../../constants/placeholders";
 
 const HomeSearch = ({ searchMode = SEARCH_MODE_WORK }) => {
-  const [searchKeyword, setSearchKeyword] = useState("");
+  const [searchKeyword, setSearchKeyword] = useState("zidar");
   const [suggestions] = useSearchSuggestions(searchKeyword, searchMode);
 
   const displaySuggestions = () => (suggestions.length > 0 ? "block" : "none");
+  const getSuggestionCard = suggestion => {
+    switch (suggestion.type) {
+      case SUGGESTION_TYPE_WORKER:
+        return (
+          <ListGroup.Item key={Math.random()} action>
+            <WorkerSuggestionCard worker={suggestion.model} />
+          </ListGroup.Item>
+        );
+      case SUGGESTION_TYPE_HIRER:
+        return (
+          <ListGroup.Item key={Math.random()} action>
+            <WorkerSuggestionCard worker={suggestion.model} />
+          </ListGroup.Item>
+        );
+    }
+  };
 
   return (
     <>
@@ -52,11 +74,7 @@ const HomeSearch = ({ searchMode = SEARCH_MODE_WORK }) => {
         style={{ display: displaySuggestions() }}>
         <Col lg={12}>
           <ListGroup className={css.homeSearchSuggestionsList}>
-            <ListGroup.Item>Cras justo odio</ListGroup.Item>
-            <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-            <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-            <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
-            <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+            {suggestions.map(s => getSuggestionCard(s))}
           </ListGroup>
         </Col>
       </Row>
