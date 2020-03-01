@@ -6,4 +6,9 @@
 }
 
 .homeSearchSuggestionsList {
+  position: absolute;
+  padding-left: inherit;
+  padding-right: inherit;
+  left: 0;
+  right: 0;
 }
