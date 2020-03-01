@@ -1,3 +1,15 @@
 .homeSearchFormControl {
   height: 80px;
 }
+
+.homeSearchSuggestionsWrapper {
+}
+
+.homeSearchSuggestionsList {
+  z-index: 1;
+  position: absolute;
+  padding-left: inherit;
+  padding-right: inherit;
+  left: 0;
+  right: 0;
+}

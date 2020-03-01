@@ -1,0 +1,19 @@
+.suggestionCardWrapper {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.suggestionCardImageContainer img {
+  width: 80px;
+  height: 80px;
+}
+
+.suggestionCardDetailContainer {
+  flex: 1;
+  height: 80px;
+}
+
+.suggestionCardOccupation {
+  color: grey;
+}
