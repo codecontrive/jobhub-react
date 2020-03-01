@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
 
 import {
   InputGroup,
@@ -10,25 +11,26 @@ import {
   ListGroup
 } from "react-bootstrap";
 
-import css from "./HomeSearch.css";
-import { Worker } from "../../models/user/Worker";
+import { SEARCH_MODE_WORK } from "../../constants/search/searchModes";
 
-export const HomeSearch = () => {
-  const [suggestions, setSuggestions] = useState([]);
+import css from "./HomeSearch.css";
+import { useSearchSuggestions } from "../../hooks/useSearchSuggestions";
+import { homeSearchInputPlaceholder } from "../../constants/placeholders";
+
+const HomeSearch = ({ searchMode = SEARCH_MODE_WORK }) => {
+  const [searchKeyword, setSearchKeyword] = useState("");
+  const [suggestions] = useSearchSuggestions(searchKeyword);
 
   const displaySuggestions = () => (suggestions.length > 0 ? "block" : "none");
-
-  // This function is going to be removed or replaced with a hook.
-  const search = text =>
-    setSuggestions(text.length === 0 ? [] : text.split(" "));
 
   return (
     <>
       <InputGroup>
         <FormControl
           className={`${css.homeSearchFormControl}`}
-          onChange={e => search(e.target.value)}
-          placeholder="Search"
+          value={searchKeyword}
+          onChange={e => setSearchKeyword(e.target.value)}
+          placeholder={homeSearchInputPlaceholder(searchMode)}
           aria-label="Search"
           aria-describedby="basic-addon2"
         />
@@ -61,3 +63,5 @@ export const HomeSearch = () => {
     </>
   );
 };
+
+export default connect(state => state)(HomeSearch);

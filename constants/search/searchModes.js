@@ -1,0 +1,2 @@
+export const SEARCH_MODE_WORK = "SEARCH_MODE_WORK";
+export const SEARCH_MODE_HIRE = "SEARCH_MODE_HIRE";

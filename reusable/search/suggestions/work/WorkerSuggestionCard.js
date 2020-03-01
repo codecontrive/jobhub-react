@@ -4,3 +4,5 @@ import Link from "next/link";
 const WorkerSuggestionCard = ({ worker }) => {
   return <Link href="#">da</Link>;
 };
+
+export default WorkerSuggestionCard;
