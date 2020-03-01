@@ -11,14 +11,15 @@ import {
 } from "react-bootstrap";
 
 import css from "./HomeSearch.css";
+import { Worker } from "../../models/user/Worker";
 
 export const HomeSearch = () => {
   const [suggestions, setSuggestions] = useState([]);
 
   const displaySuggestions = () => (suggestions.length > 0 ? "block" : "none");
 
-  // This function is going to be removed.
-  const temporarySetResult = text =>
+  // This function is going to be removed or replaced with a hook.
+  const search = text =>
     setSuggestions(text.length === 0 ? [] : text.split(" "));
 
   return (
@@ -26,7 +27,7 @@ export const HomeSearch = () => {
       <InputGroup>
         <FormControl
           className={`${css.homeSearchFormControl}`}
-          onChange={e => temporarySetResult(e.target.value)}
+          onChange={e => search(e.target.value)}
           placeholder="Search"
           aria-label="Search"
           aria-describedby="basic-addon2"
