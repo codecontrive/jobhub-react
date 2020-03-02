@@ -40,6 +40,29 @@ const Home = () => {
                       onClick={() => setSearchMode(SEARCH_MODE_HIRE)}>
                       Hire
                     </ListGroup.Item>
+                    const listgrp = [{ title: "Work",active: false,onClick: () => {}},{title: "Hire", active: true,onClick: () => {}}
+                    ,{title: "Work", active:true,onclick: ()=> {}}, {title: "Hire", active: false, onclick: () => {}}];
+
+                    for (const i=0, i < listgrp.length; i++) {
+                      const listz = listgrp(i);
+                      switch (lists) {
+                        case 0:
+
+                          break;
+                        case 1:
+
+                          break;
+                        case 2:
+
+                          break;
+                        case 3:
+
+                          break;
+                      }
+
+
+                    }
+
                   </ListGroup>
                 </Col>
               </Row>
@@ -56,3 +79,5 @@ const Home = () => {
 };
 
 export default connect(state => state)(Home);
+
+
